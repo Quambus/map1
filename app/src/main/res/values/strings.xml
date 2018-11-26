@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="welcome">Welcome!</string>
+    <string name="startButton">Get Started!</string>
+    <string name="title_activity_add_event">addEventActivity</string>
+    <string name="addEvent">Add Event</string>
+    <string name="NameEvent">Name of Event:</string>
+    <string name="LocationEvent">Location:</string>
+</resources>

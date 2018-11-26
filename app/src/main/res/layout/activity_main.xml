@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<Button
+    android:id="@+id/getStartedButton"
+    android:layout_width="128dp"
+    android:layout_height="48dp"
+    android:layout_marginStart="128dp"
+    android:layout_marginLeft="128dp"
+    android:layout_marginEnd="128dp"
+    android:layout_marginRight="128dp"
+    android:layout_marginBottom="16dp"
+    android:onClick="getStarted"
+    android:text="@string/startButton"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeTextBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginRight="143dp"
+        android:layout_marginBottom="217dp"
+        android:text="@string/welcome"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        app:layout_constraintBottom_toTopOf="@+id/getStartedButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/welcome" />
+
+</android.support.constraint.ConstraintLayout>
