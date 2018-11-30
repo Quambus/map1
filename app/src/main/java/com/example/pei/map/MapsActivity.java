@@ -26,9 +26,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
-    public void addEvent(View view)
+    public void LoginPage(View view)
     {
-        Intent intent = new Intent(this, addEventActivity1.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 
