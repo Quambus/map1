@@ -1,14 +1,20 @@
 <resources>
-    <string name="app_name">map</string>
+    <string name="app_name">Event Tracker</string>
     <string name="title_activity_maps">Map</string>
-    <string name="welcome">Welcome!</string>
+    <string name="welcome">Event Tracker</string>
     <string name="startButton">Get Started!</string>
     <string name="title_activity_add_event">addEventActivity</string>
     <string name="addEvent">Add Event</string>
     <string name="NameEvent">Name of Event:</string>
     <string name="LocationEvent">Location:</string>
+    <string name="HostEvent">Host:</string>
+    <string name="DescriptionEvent">Description:</string>
+    <string name="DateEvent">Date:</string>
+    <string name="TimeEvent">Time:</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_login1">Sign in</string>
+    <string name="EventCreated">Event is successfully created!</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>

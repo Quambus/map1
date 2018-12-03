@@ -12,19 +12,20 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="52dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="76dp"
         map:cameraZoom="13"
         map:layout_constraintTop_toTopOf="parent"
         tools:context=".MapsActivity"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="16dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="8dp"
         android:onClick="LoginPage"
         android:text="Login"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,8 +35,8 @@
         android:id="@+id/ViewEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginLeft="112dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginLeft="244dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="14dp"
         android:onClick="viewEvents"
@@ -43,8 +44,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.363"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="View Event" />
 
 </android.support.constraint.ConstraintLayout>
-
