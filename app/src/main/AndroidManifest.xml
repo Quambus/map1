@@ -45,7 +45,8 @@
             android:label="@string/title_activity_maps" />
         <activity android:name=".addEventActivity1" />
         <activity android:name=".viewEventActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MarkerActivity"></activity>
     </application>
 
 </manifest>

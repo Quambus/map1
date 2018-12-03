@@ -10,11 +10,26 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements
+        OnMapReadyCallback,
+        GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
+
+    private static final LatLng GSU = new LatLng(42.3509182,-71.1111392);
+    private static final LatLng CAS = new LatLng(42.3502584,-71.1070807);
+    private static final LatLng Questrom = new LatLng(42.349605,-71.1019157);
+    private static final LatLng FitRec = new LatLng(42.3518687,-71.1186489);
+
+    private Marker mGSU;
+    private Marker mCAS;
+    private Marker mQuestrom;
+    private Marker mFitRec;
+
+    public static String MarkerName = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,21 +68,42 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng BostonUniversity = new LatLng(42.3504997, -71.1075878);
-        //mMap.addMarker(new MarkerOptions().position(BostonUniversity).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(BostonUniversity));
 
-        LatLng GSU = new LatLng(42.3509182,-71.1111392);
-        mMap.addMarker(new MarkerOptions().position(GSU).title("GSU"));
+        mGSU = mMap.addMarker(new MarkerOptions()
+                .position(GSU)
+                .title("GSU"));
+        mGSU.setTag(0);
 
-        LatLng CAS = new LatLng(42.3502584,-71.1070807);
-        mMap.addMarker(new MarkerOptions().position(CAS).title("CAS"));
+        mCAS = mMap.addMarker(new MarkerOptions()
+                .position(CAS)
+                .title("CAS"));
+        mCAS.setTag(0);
 
-        LatLng Questrom = new LatLng(42.349605,-71.1019157);
-        mMap.addMarker(new MarkerOptions().position(Questrom).title("Questrom"));
+        mQuestrom = mMap.addMarker(new MarkerOptions()
+                .position(Questrom)
+                .title("Questrom"));
+        mQuestrom.setTag(0);
 
-        LatLng FitRec = new LatLng(42.3518687,-71.1186489);
-        mMap.addMarker(new MarkerOptions().position(FitRec).title("FitRec"));
+        mFitRec = mMap.addMarker(new MarkerOptions()
+                .position(FitRec)
+                .title("FitRec"));
+        mFitRec.setTag(0);
+
+        mMap.setOnMarkerClickListener(this);
     }
 
+    @Override
+    public boolean onMarkerClick(final Marker marker) {
+
+        MarkerName = marker.getTitle();
+
+        Intent intent = new Intent(this, MarkerActivity.class);
+        intent.putExtra("PASS_NAME",MarkerName);
+
+        startActivity(intent);
+
+        return false;
+    }
 
 }
